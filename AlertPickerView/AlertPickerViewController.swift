@@ -81,7 +81,9 @@ extension AlertPickerViewController {
     }
 
     static func instantiate(with model: Model) -> AlertPickerViewController? {
-        let storyBoard = UIStoryboard(name: String(describing: AlertPickerViewController.self), bundle: Bundle(for: AlertPickerViewController.self))
+        guard let path = Bundle.main.path(forResource: "AlertPickerView", ofType: "bundle") else { return nil }
+        let bundle = Bundle(path: path)
+        let storyBoard = UIStoryboard(name: String(describing: AlertPickerViewController.self), bundle: bundle)
 
         guard let viewController = storyBoard.instantiateInitialViewController() as? AlertPickerViewController else { return nil }
 

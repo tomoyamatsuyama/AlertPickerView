@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'AlertPickerView'
-  spec.version      = '0.1.1'
+  spec.version      = '0.1.2'
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage     = 'https://github.com/tomoyamatsuyama/AlertPickerView'
   spec.authors      = { 'Tomoya Matsuyama' => 'm.tomoya0221@gmail.com' }
@@ -10,5 +10,8 @@ Pod::Spec.new do |spec|
   spec.dependency 'RxSwift'
   spec.dependency 'RxCocoa'
   spec.ios.deployment_target = "11.0"
+  spec.resource_bundles = {
+    "AlertPickerView" => ['AlertPickerView/*.storyboard']
+  }
 
 end
