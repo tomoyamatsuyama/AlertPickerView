@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'AlertPickerView'
-  spec.version      = '0.1.2'
+  spec.version      = '0.1.3'
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage     = 'https://github.com/tomoyamatsuyama/AlertPickerView'
   spec.authors      = { 'Tomoya Matsuyama' => 'm.tomoya0221@gmail.com' }
