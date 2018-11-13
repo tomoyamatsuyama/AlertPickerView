@@ -42,7 +42,7 @@ public class AlertPickerViewController: UIViewController {
 
     private let selectedRelay = PublishRelay<SelectedItem>()
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         modalPresentationStyle = .custom
@@ -81,7 +81,8 @@ public extension AlertPickerViewController {
     }
 
     static func instantiate(with model: Model) -> AlertPickerViewController? {
-        let bundle = Bundle(for: AlertPickerView.self)
+        let path = Bundle.main.path(forResource: "AlertPickerView", ofType: "bundle")!
+        let bundle = Bundle(path: path)
         let storyBoard = UIStoryboard(name: String(describing: AlertPickerViewController.self), bundle: bundle)
 
         guard let viewController = storyBoard.instantiateInitialViewController() as? AlertPickerViewController else { return nil }
@@ -93,19 +94,19 @@ public extension AlertPickerViewController {
 }
 
 extension AlertPickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return model.columns.count
     }
 
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return model.columns[component].rows.count
     }
 
-    func pickerView(_ pickerview: UIPickerView, titleForRow row: Int, forComponent component: Int)-> String? {
+    public func pickerView(_ pickerview: UIPickerView, titleForRow row: Int, forComponent component: Int)-> String? {
         return model.columns[component].rows[row].title
     }
 
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedRelay.accept(.init(component, row))
     }
 

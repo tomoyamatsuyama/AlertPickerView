@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-public sclass AlertPickerViewDelegate: NSObject {}
+public class AlertPickerViewDelegate: NSObject {}
 
-public extension AlertPickerViewDelegate: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+extension AlertPickerViewDelegate: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 
         let animator = AlertPickerAnimator(forPresented: true)
 
         return animator
     }
 
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animator = AlertPickerAnimator(forPresented: false)
 
         return animator
