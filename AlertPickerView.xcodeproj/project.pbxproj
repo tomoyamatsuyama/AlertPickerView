@@ -29,8 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F30D8BB6830C6B2D2F9403A /* Pods-AlertPickerViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertPickerViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlertPickerViewTests/Pods-AlertPickerViewTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9EC92E7772B6E4E67087FDD2 /* Pods-AlertPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlertPickerView/Pods-AlertPickerView.debug.xcconfig"; sourceTree = "<group>"; };
 		C3A1DF3A21996E0E0040DAA3 /* AlertPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlertPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A1DF3D21996E0E0040DAA3 /* AlertPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertPickerView.h; sourceTree = "<group>"; };
 		C3A1DF3E21996E0E0040DAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,10 +39,8 @@
 		C3A1DF56219972A00040DAA3 /* AlertPickerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertPickerViewController.storyboard; sourceTree = "<group>"; };
 		C3A1DF58219973A80040DAA3 /* AlertPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPickerViewDelegate.swift; sourceTree = "<group>"; };
 		C3A1DF5A219973D30040DAA3 /* AlertPickerAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPickerAnimator.swift; sourceTree = "<group>"; };
-		C45DDD13816B6D96B79854DD /* Pods-AlertPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertPickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlertPickerView/Pods-AlertPickerView.release.xcconfig"; sourceTree = "<group>"; };
 		CB3CFC4395E48AE27B7307F1 /* Pods_AlertPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlertPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67758268AFBE42EF84E8286 /* Pods_AlertPickerViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlertPickerViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2F171191679C92A4FB6EC7A /* Pods-AlertPickerViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertPickerViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlertPickerViewTests/Pods-AlertPickerViewTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +67,6 @@
 		1B3A90BB72CC7ADD1F197F24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9EC92E7772B6E4E67087FDD2 /* Pods-AlertPickerView.debug.xcconfig */,
-				C45DDD13816B6D96B79854DD /* Pods-AlertPickerView.release.xcconfig */,
-				4F30D8BB6830C6B2D2F9403A /* Pods-AlertPickerViewTests.debug.xcconfig */,
-				F2F171191679C92A4FB6EC7A /* Pods-AlertPickerViewTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -451,12 +443,12 @@
 		};
 		C3A1DF4F21996E0E0040DAA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EC92E7772B6E4E67087FDD2 /* Pods-AlertPickerView.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2JF5KR89B3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -469,6 +461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomoya.AlertPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -478,12 +471,12 @@
 		};
 		C3A1DF5021996E0E0040DAA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45DDD13816B6D96B79854DD /* Pods-AlertPickerView.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2JF5KR89B3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -496,6 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomoya.AlertPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,10 +498,10 @@
 		};
 		C3A1DF5221996E0E0040DAA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F30D8BB6830C6B2D2F9403A /* Pods-AlertPickerViewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2JF5KR89B3;
 				INFOPLIST_FILE = AlertPickerViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -523,10 +517,10 @@
 		};
 		C3A1DF5321996E0E0040DAA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2F171191679C92A4FB6EC7A /* Pods-AlertPickerViewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2JF5KR89B3;
 				INFOPLIST_FILE = AlertPickerViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

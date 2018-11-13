@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AlertPickerViewController: UIViewController {
+public class AlertPickerViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
 
@@ -52,7 +52,7 @@ class AlertPickerViewController: UIViewController {
     }
 }
 
-extension AlertPickerViewController {
+public extension AlertPickerViewController {
 
     private enum Const {
         static let cornarRadius: CGFloat = 12
@@ -81,8 +81,7 @@ extension AlertPickerViewController {
     }
 
     static func instantiate(with model: Model) -> AlertPickerViewController? {
-        guard let path = Bundle.main.path(forResource: "AlertPickerView", ofType: "bundle") else { return nil }
-        let bundle = Bundle(path: path)
+        let bundle = Bundle(for: AlertPickerView.self)
         let storyBoard = UIStoryboard(name: String(describing: AlertPickerViewController.self), bundle: bundle)
 
         guard let viewController = storyBoard.instantiateInitialViewController() as? AlertPickerViewController else { return nil }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AlertPickerAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+public class AlertPickerAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
     let forPresented: Bool
 
@@ -17,11 +17,11 @@ class AlertPickerAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         self.forPresented = forPresented
     }
 
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return Const.duration
     }
 
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: .from) else { return }
         guard let toVC = transitionContext.viewController(forKey: .to) else { return }
 
