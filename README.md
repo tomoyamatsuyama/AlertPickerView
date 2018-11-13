@@ -1,4 +1,4 @@
-# ColorPalletGen
+# AlertPickerView
 
 
 ## How to install
